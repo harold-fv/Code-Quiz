@@ -34,7 +34,7 @@ To install and use the Code Quiz application, please follow these steps:
 
 You can clone this repository to your local machine using Git:
 
-git clonehttps://github.com/harold-fv/Code-Quiz.
+git clone https://github.com/harold-fv/Code-Quiz.
 
 Open the index.html file in your web browser to run the application.
 
