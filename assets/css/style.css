@@ -53,7 +53,8 @@ li {
 /* .highscore_page, */
 /* #highScoresButton, */
 /* #high_score_header, */
-
+#backButton,
+#highScores_Button,
 #clear_btn,
 #check_line {
     display: none;
