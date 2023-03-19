@@ -200,4 +200,20 @@
         
         showResultsPanel.innerHTML = '';
         highScoreList.innerHTML = '';
-    }
+
+        
+        // console.log(sort(locallyStoredScores));
+        // var object = sort(locallyStoredScores);
+
+        for (var i = 0; i < object.length; i++) {
+            // console.log(object[i]);
+            var li = document.createElement("li");
+            li.textContent = "user: " + (object[i].user).toUpperCase() + "      |      score: " + object[i].score;
+            li.setAttribute("data-index", i);
+            highScoreList.appendChild(li);
+            showResultsPanel.appendChild(highScoreList);
+        }   
+
+       // showResultsPanel.appendChild(highScoreList);
+    };
+    
