@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Code Quiz</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <!--right corner to set a timer-->
+      <div id="timerContainer">
+          <p id="timer"> Time remaining: 60 sec</p>
+          <p id="warning"></p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div>
+      <!--intro section-->
+      <section class="intro_page" id="intro_page">
+        <div id="intro">
+          <h1>
+            Welcome to Coding Quiz Challenge
+          </h1>
+          <p id="instruction">
+            You are given 60 seconds to respond to the questions of this quiz. Please be reminded that for
+            every wrong response, 5 seconds are deducted from your remaining time.
+          </p>
+          <button class="button" id="start_button" onClick="startQuiz()">Start Quiz</button>
+        </div>
+      </section>
+
+      <!--questions section-->
+      <section class="question_page" id="question_page">
+        <div>
+          <!--question body-->
+          <div >
+            <h2 id="show_question">Ask the question</h2>
+            <div id="ask_question">
+              <ul>
+                <center>
+                  <li><button class="choices button" id="response_btn1" value="1" onclick="checkResponse(event)">response1</button></li>
+                  <li><button class="choices button" id="response_btn2" value="2" onclick="checkResponse(event)">response2</button></li>
+                  <li><button class="choices button" id="response_btn3" value="3" onclick="checkResponse(event)">response3</button></li>
+                  <li><button class="choices button" id="response_btn4" value="4" onclick="checkResponse(event)">response4</button></li>
+                </center>
+              </ul>
+            </div>
+          <div>
+
+          <div id="answer_check">
+            <p>Right or Wrong</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="submit_panel" id="submit_panel">
+        <div>
+          <h2 id="finish">Game over!</h2>
+          <p id="final_score">Your final score is: </p>
+          <p>Enter initials</p>
+          <input id="initial"> <br><br>
+          <button class="button" id="submit_btn" onclick="processSubmit()">Submit</button>
+        </div>
+  
+      </section>
+
+      <center>
+        <h4 id="high_score_header"></h4>
+        <div id="show_results_label">
+            <ul id="high_score_list"></ul>
+        </div>
+          <button class="button" id="highScores_Button" onclick="showHighScores()">Get High Scores</button>
+          <button class="button" id="backButton" onclick="resetGame()">Go Back</button>
+
+
+      </center>
+    </div>
+  </main>
+  <script src="./assets/script/script.js"></script>
+</body>
+</html>
