@@ -213,7 +213,17 @@
             highScoreList.appendChild(li);
             showResultsPanel.appendChild(highScoreList);
         }   
-
-       // showResultsPanel.appendChild(highScoreList);
     };
-    
+    function resetGame() {
+        // console.log("INSIDE RESET");
+        introPage.style.display = "block";
+        showResultsPanel.style.display = "none";
+        backButton.style.display = "none";
+        clearBtn.style.display = "none"
+        highScoresButton.style.display = "none";
+        highScoreHeader.innerHTML = '';
+        secondsLeft = 60;
+        questionNumber = 0;
+        totalScore = 0;
+        questionCount = 1;
+    }
